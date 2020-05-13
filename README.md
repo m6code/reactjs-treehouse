@@ -1,6 +1,9 @@
 # Learn React Track From TeamTreehouse
 
-1. [React Basics](https://teamtreehouse.com/library/react-basics-2)
+## 1. [React Basics](https://teamtreehouse.com/library/react-basics-2)
+    - [Download starter files here](http://treehouse-code-samples.s3.amazonaws.com/react-basics/scoreboard.zip)
+    - [Get complete project files here](https://treehouse-code-samples.s3.amazonaws.com/react-basics/1-first-steps-in-react.zip)
+
 2. [React Components](https://teamtreehouse.com/library/react-components)
 3. [Using Create React App](https://teamtreehouse.com/library/using-create-react-app)
 4. [React Context API](https://teamtreehouse.com/library/react-context-api)

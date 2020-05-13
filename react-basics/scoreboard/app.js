@@ -8,25 +8,25 @@ const Header = (props) => {
 }
 
 // Counter component
-const Counter = () => {
+const Counter = (props) => {
     return (
         <div className="counter">
             <button className="counter-action decrement"> - </button>
-            <span className="counter-score">21</span>
+            <span className="counter-score">{props.score}</span>
             <button className="counter-action increment"> + </button>
         </div>
     );
 }
 
 // Player component
-const Player = () => {
+const Player = (props) => {
     return (
         <div className="player">
             <span className="player-name">
-                Ben
+                {props.name}
             </span>
             {/* <Counter /> // Component composition */}
-            <Counter />
+            <Counter score={props.score} />
         </div>
     );
 }
@@ -38,12 +38,15 @@ const App = () => {
             <Header title="Scoreboard" totalPlayers={1} />
 
             {/* Players list */}
-            <Player />
+            <Player name="BenJamin" score={23 + 10} />
+            <Player name="Valerie" score={78} />
+            <Player name="Dammy Krane" score={14} />
+            <Player name="Barnabas" score={309} />
         </div>
     );
 }
 
 ReactDOM.render(
-    <App />,
+            <App />,
     document.getElementById('root')
 );

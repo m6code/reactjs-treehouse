@@ -4,6 +4,22 @@
 - [Download starter files here](http://treehouse-code-samples.s3.amazonaws.com/react-basics/scoreboard.zip)
 - [Get complete project files here](https://treehouse-code-samples.s3.amazonaws.com/react-basics/1-first-steps-in-react.zip)
 
+####  Binding Event handlers to components
+
+  - [A] if the function is defined like so `de|incrementScore() {...}`
+   	- add this to the class after the state `incrementScore = this.incrementScore.bind(this);`  // then refer to it in the button like this `{this.incrementScore}`
+    - add this to the class after the state `decrementScore = this.decrementScore.bind(this);` // then refer to it in the button like this `{this.decrementScore}`
+   	- OR
+   	- call this directly on the button onClick method `{this.decrementScore.bind(this)}`
+   	- OR
+   	- use a call back function directly on the onClick method `{() => this.incrementScore()}`
+   
+  - [B] if the function is defined as arrow function
+   	- directly bind it with a lexical this, i.e an arrow function when defining the method like so
+   	- decrementScore = () => {...} and just reference it in the button's onClick like so `{this.decrementScore}`
+    - incrementScore = () => {...} and just reference it in the button's onClick like so `{this.incrementScore}`
+
+
 ## 2. [React Components](https://teamtreehouse.com/library/react-components)
 ## 3. [Using Create React App](https://teamtreehouse.com/library/using-create-react-app)
 ## 4. [React Context API](https://teamtreehouse.com/library/react-context-api)

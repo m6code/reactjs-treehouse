@@ -1,3 +1,26 @@
+const players = [
+    {
+        id: Date.now(),
+        name: "Benjamin",
+        score: 8909
+    },
+    {
+        id: Date.now()+1,
+        name: "Johnny",
+        score: 78
+    },
+    {
+        id: Date.now()+2,
+        name: "Simi",
+        score: 99
+    },
+    {
+        id: Date.now()+3,
+        name: "Aramide",
+        score: 88
+    }
+]
+
 const Header = (props) => {
     // React component are required to begin with capital letter to differential between html tags and react component JSX tags.
     return (<header>
@@ -32,21 +55,25 @@ const Player = (props) => {
 }
 
 // App component
-const App = () => {
+const App = (props) => {
     return (
         <div className="scoreboard">
-            <Header title="Scoreboard" totalPlayers={1} />
+            <Header title="Scoreboard" totalPlayers={props.initPlayers.length} />
 
             {/* Players list */}
-            <Player name="BenJamin" score={23 + 10} />
-            <Player name="Valerie" score={78} />
-            <Player name="Dammy Krane" score={14} />
-            <Player name="Barnabas" score={309} />
+            {props.initPlayers.map(player =>
+                <Player
+                    name={player.name}
+                    score={player.score}
+                    key={player.id.toString()}
+                    // react docs recommends that our key be string
+                />
+            )}
         </div>
     );
 }
 
 ReactDOM.render(
-            <App />,
+    <App initPlayers={players} />,
     document.getElementById('root')
 );

@@ -7,6 +7,17 @@ const Header = () => {
     );
 }
 
+// Counter component
+const Counter = () => {
+    return (
+        <div className="counter">
+            <button className="counter-action decrement"> - </button>
+            <span className="counter-score">21</span>
+            <button className="counter-action increment"> + </button>
+        </div>
+    );
+}
+
 // Player component
 const Player = () => {
     return (
@@ -14,11 +25,8 @@ const Player = () => {
             <span className="player-name">
                 Ben
             </span>
-            <span className="counter">
-                <button className="counter-action decrement"> - </button>
-                <span className="counter-score">34</span>
-                <button className="counter-action increment"> + </button>
-            </span>
+            {/* <Counter /> // Component composition */}
+            <Counter />
         </div>
     );
 }

@@ -1,28 +1,32 @@
-import React from 'react'
+import React, {Component} from 'react'
 
 import Header from './Header'; 
 import Player from './Player'
 
 // App component
-class App extends React.Component {
+class App extends Component {
 
   state = {
       players: [
           {
               id: Date.now(),
               name: "Benjamin",
+              score: 0,
           },
           {
               id: Date.now() + 1,
               name: "Johnny",
+              score: 0,
           },
           {
               id: Date.now() + 2,
               name: "Simi",
+              score: 0,
           },
           {
               id: Date.now() + 3,
               name: "Aramide",
+              score: 0,
           }
       ]
   };
@@ -47,6 +51,7 @@ class App extends React.Component {
                       key={player.id.toString()}
                       id={player.id}
                       removePlayer={this.handleRemovePlayer}
+                      score={player.score}
                   // react docs recommends that our key be string
                   />
               )}

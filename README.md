@@ -23,6 +23,7 @@
 ## 2. [React Components](https://teamtreehouse.com/library/react-components)
 - Components is a function or class that optionally accepts input and renders a part of your UI.
 
+- When two or more component require access to same state, move the state into their parent component (Unidirectional flow of data, from Parent -> Children -> GrandChildren). This is called lifting state up.
 
 
 ## 3. [Using Create React App](https://teamtreehouse.com/library/using-create-react-app)

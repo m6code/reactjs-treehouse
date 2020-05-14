@@ -11,7 +11,7 @@ const Player = (props) => {
                 {props.name}
             </span>
             {/* <Counter /> // Component composition */}
-            <Counter />
+            <Counter score={props.score}/>
         </div>
     );
   }

@@ -31,6 +31,17 @@ class App extends Component {
       ]
   };
 
+   handleScoreChange = (index, delta) => {
+        this.setState(prevState => {
+            return {
+                score: prevState.players[index].score += delta
+            }
+        });
+
+
+        // console.log("delta: ", delta + " index: ", index);
+    }
+
   handleRemovePlayer = (id) => {
       this.setState(prevState => {
           return{
@@ -45,13 +56,15 @@ class App extends Component {
               <Header title="Scoreboard" totalPlayers={this.state.players.length} />
 
               {/* Players list */}
-              {this.state.players.map(player =>
+              {this.state.players.map( (player, index) =>
                   <Player
                       name={player.name}
                       key={player.id.toString()}
                       id={player.id}
-                      removePlayer={this.handleRemovePlayer}
                       score={player.score}
+                      index={index}
+                      removePlayer={this.handleRemovePlayer}
+                      changeScore={this.handleScoreChange}
                   // react docs recommends that our key be string
                   />
               )}

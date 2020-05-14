@@ -1,26 +1,3 @@
-const players = [
-    {
-        id: Date.now(),
-        name: "Benjamin",
-        score: 8909
-    },
-    {
-        id: Date.now() + 1,
-        name: "Johnny",
-        score: 78
-    },
-    {
-        id: Date.now() + 2,
-        name: "Simi",
-        score: 99
-    },
-    {
-        id: Date.now() + 3,
-        name: "Aramide",
-        score: 88
-    }
-]
-
 const Header = (props) => {
     // React component are required to begin with capital letter to differential between html tags and react component JSX tags.
     return (<header>
@@ -92,6 +69,7 @@ const Player = (props) => {
     return (
         <div className="player">
             <span className="player-name">
+            <button className="remove-player" onClick={() => props.removePlayer(props.id)}>x</button>
                 {props.name}
             </span>
             {/* <Counter /> // Component composition */}
@@ -101,25 +79,59 @@ const Player = (props) => {
 }
 
 // App component
-const App = (props) => {
-    return (
-        <div className="scoreboard">
-            <Header title="Scoreboard" totalPlayers={props.initPlayers.length} />
+class App extends React.Component {
 
-            {/* Players list */}
-            {props.initPlayers.map(player =>
-                <Player
-                    name={player.name}
-                    score={player.score}
-                    key={player.id.toString()}
-                // react docs recommends that our key be string
-                />
-            )}
-        </div>
-    );
+    state = {
+        players: [
+            {
+                id: Date.now(),
+                name: "Benjamin",
+            },
+            {
+                id: Date.now() + 1,
+                name: "Johnny",
+            },
+            {
+                id: Date.now() + 2,
+                name: "Simi",
+            },
+            {
+                id: Date.now() + 3,
+                name: "Aramide",
+            }
+        ]
+    };
+
+    handleRemovePlayer = (id) => {
+        this.setState(prevState => {
+            return{
+                players: prevState.players.filter( p => p.id !== id)
+            };
+        });
+    }
+
+    render() {
+        return (
+            <div className="scoreboard">
+                <Header title="Scoreboard" totalPlayers={this.state.players.length} />
+
+                {/* Players list */}
+                {this.state.players.map(player =>
+                    <Player
+                        name={player.name}
+                        key={player.id.toString()}
+                        id={player.id}
+                        removePlayer={this.handleRemovePlayer}
+                    // react docs recommends that our key be string
+                    />
+                )}
+            </div>
+        );
+    }
+
 }
 
 ReactDOM.render(
-    <App initPlayers={players} />,
+    <App />,
     document.getElementById('root')
 );

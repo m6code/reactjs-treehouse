@@ -2,32 +2,33 @@ import React, { Component } from 'react'
 
 import Header from './Header';
 import Player from './Player'
+import AddPlayerForm from './AddPlayerForm';
 
 // App component
 class App extends Component {
 
     state = {
         players: [
-            {
-                id: Date.now(),
-                name: "Benjamin",
-                score: 0,
-            },
-            {
-                id: Date.now() + 1,
-                name: "Johnny",
-                score: 0,
-            },
-            {
-                id: Date.now() + 2,
-                name: "Simi",
-                score: 0,
-            },
-            {
-                id: Date.now() + 3,
-                name: "Aramide",
-                score: 0,
-            }
+            // {
+            //     id: Date.now(),
+            //     name: "Benjamin",
+            //     score: 0,
+            // },
+            // {
+            //     id: Date.now() + 1,
+            //     name: "Johnny",
+            //     score: 0,
+            // },
+            // {
+            //     id: Date.now() + 2,
+            //     name: "Simi",
+            //     score: 0,
+            // },
+            // {
+            //     id: Date.now() + 3,
+            //     name: "Aramide",
+            //     score: 0,
+            // }
         ]
     };
 
@@ -37,9 +38,22 @@ class App extends Component {
                 score: prevState.players[index].score += delta
             }
         });
-
-
         // console.log("delta: ", delta + " index: ", index);
+    }
+
+    handleAddPlayer = (name) => {
+        this.setState(prevState => {
+            return {
+                players: [
+                    ...prevState.players,
+                    {
+                        id: Date.now(),
+                        name: name,
+                        score: 0,
+                    }
+                ]
+            };
+        });
     }
 
     handleRemovePlayer = (id) => {
@@ -71,6 +85,7 @@ class App extends Component {
                     // react docs recommends that our key be string
                     />
                 )}
+                <AddPlayerForm addPlayer={this.handleAddPlayer} />
             </div>
         );
     }

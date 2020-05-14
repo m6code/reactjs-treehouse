@@ -21,6 +21,10 @@
 
 
 ## 2. [React Components](https://teamtreehouse.com/library/react-components)
+- Components is a function or class that optionally accepts input and renders a part of your UI.
+
+
+
 ## 3. [Using Create React App](https://teamtreehouse.com/library/using-create-react-app)
 ## 4. [React Context API](https://teamtreehouse.com/library/react-context-api)
 ## 5. [React Router 4 Basics](https://teamtreehouse.com/library/react-router-4-basics-2)

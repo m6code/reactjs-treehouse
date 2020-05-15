@@ -47,17 +47,20 @@ export class Stopwatch extends Component {
     }
 
     render() {
-        const seconds = Math.floor(this.state.elapsedTime / 1000)
+        const {handleReset, handleStopwatch} = this; // equivalent to writing {this.handleReset} & {this.handleStopwatch} in the onClick method of the buttons
+        const {elapsedTime, isRunning} = this.state; //Destructuring to avoid this.state.elapsedTime|isRunning calling in the JSX
+
+        const seconds = Math.floor(elapsedTime / 1000);
         return (
             <div className="stopwatch">
                 <h2>Stopwatch</h2>
                 <span className="stopwatch-time">
                     {seconds}
                 </span>
-                <button onClick={this.handleStopwatch}>
-                    {this.state.isRunning ? "Stop" : "Start"}
+                <button onClick={handleStopwatch}>
+                    {isRunning ? "Stop" : "Start"}
                 </button>
-                <button onClick={this.handleReset}>Reset</button>
+                <button onClick={handleReset}>Reset</button>
             </div>
         );
     }

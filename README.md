@@ -27,6 +27,7 @@
 
 - React allows us use callback functions to allow a child change state of a parent.
 
+- PureComponents help prevents unnecessary and wasteful renders when one component is updated
 
 ## 3. [Using Create React App](https://teamtreehouse.com/library/using-create-react-app)
 ## 4. [React Context API](https://teamtreehouse.com/library/react-context-api)

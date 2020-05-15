@@ -41,6 +41,16 @@
 		- Controlled component with state calls render on every keystroke where as in refs render is only called once.
 		- Use refs whenever you are building a form that requires few input and you don't need to keep track of every keystroke.
 	- Refs are not limited to class components you can also create and use refs in funtional components
+- Type Checking in react helps you catch a lot of errors in react during developement.
+	- There a 3 ways to type check in React
+		- PropTypes
+		- TypeScript
+		- Flow 
+	- To get started 
+		- install by running `npm install --save prop-types`
+		- import proptypes in the component you wish to use it in `import  PropTypes from 'prop-types'`
+		- PropTypes.array|bool|func|number|object|string|symbol. 
+		- [Learn more about PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html)
 
 ## 3. [Using Create React App](https://teamtreehouse.com/library/using-create-react-app)
 ## 4. [React Context API](https://teamtreehouse.com/library/react-context-api)

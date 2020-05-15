@@ -64,6 +64,15 @@ class App extends Component {
         });
     }
 
+    getHighScore = () =>{
+        const scores = this.state.players.map(p => p.score);
+        const highestScore = Math.max(...scores)
+        if(highestScore){
+            return highestScore;
+        }
+        return null;
+    }
+
     render() {
         return (
             <div className="scoreboard">
@@ -79,6 +88,7 @@ class App extends Component {
                         index={index}
                         removePlayer={this.handleRemovePlayer}
                         changeScore={this.handleScoreChange}
+                        isHighScore={this.getHighScore() === player.score}
                     // react docs recommends that our key be string
                     />
                 )}

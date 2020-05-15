@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 
 
@@ -27,5 +28,8 @@ const AddPlayerForm = ({ addPlayer }) => {
     );
 }
 
+AddPlayerForm.propTypes = {
+    addPlayer: PropTypes.func,
+};
 
 export default AddPlayerForm;

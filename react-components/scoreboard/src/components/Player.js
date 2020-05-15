@@ -1,9 +1,20 @@
 import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
+
 
 import Counter from './Counter'
 
 // Player component
 class Player extends PureComponent {
+    static propTypes = {
+        changeScore: PropTypes.func,
+        removePlayer: PropTypes.func,
+        name: PropTypes.string.isRequired,
+        id: PropTypes.number,
+        index: PropTypes.number,
+        score: PropTypes.number.isRequired
+    };
+
     render() {
         // Destructure the class Component
         const {

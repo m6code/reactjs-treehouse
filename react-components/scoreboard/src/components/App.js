@@ -17,17 +17,17 @@ class App extends Component {
             {
                 id: Date.now() + 1,
                 name: "Johnny",
-                score: 0,
+                score: 1,
             },
             {
                 id: Date.now() + 2,
                 name: "Simi",
-                score: 0,
+                score: 6,
             },
             {
                 id: Date.now() + 3,
                 name: "Aramide",
-                score: 0,
+                score: 2,
             }
         ]
     };
@@ -79,7 +79,7 @@ class App extends Component {
                 <Header players={this.state.players} />
 
                 {/* Players list */}
-                {this.state.players.map((player, index) =>
+                {this.state.players.sort((a,b) => (a.score < b.score ? 1 : -1)).map((player, index) =>
                     <Player
                         name={player.name}
                         score={player.score}

@@ -34,6 +34,13 @@
 		- `const funcName = ({propsA, propsB, ...}) => {...}`
 	- for class component assign the props to this.props inside the render() method before return like this
 		- `const {propsA, propsB, ...} = this.props`
+- Refs allow you access or interact with DOM nodes or React element created in the render method. making it possible to do the traditional DOM manipulation and access forms elements and get their values.
+	- When to use controlled components or refs in forms
+		- Controlled components have internal states and require functions to update state
+		- Controlled compoents makes it easier to modify or validate user input or filter results based on user input in real time.
+		- Controlled component with state calls render on every keystroke where as in refs render is only called once.
+		- Use refs whenever you are building a form that requires few input and you don't need to keep track of every keystroke.
+	- Refs are not limited to class components you can also create and use refs in funtional components
 
 ## 3. [Using Create React App](https://teamtreehouse.com/library/using-create-react-app)
 ## 4. [React Context API](https://teamtreehouse.com/library/react-context-api)

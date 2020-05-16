@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/reactjs-treehouse/static/css/main.ccaa83d5.chunk.css",
+    "main.js": "/reactjs-treehouse/static/js/main.c0a13209.chunk.js",
+    "main.js.map": "/reactjs-treehouse/static/js/main.c0a13209.chunk.js.map",
+    "runtime-main.js": "/reactjs-treehouse/static/js/runtime-main.e2609522.js",
+    "runtime-main.js.map": "/reactjs-treehouse/static/js/runtime-main.e2609522.js.map",
+    "static/js/2.b5933473.chunk.js": "/reactjs-treehouse/static/js/2.b5933473.chunk.js",
+    "static/js/2.b5933473.chunk.js.map": "/reactjs-treehouse/static/js/2.b5933473.chunk.js.map",
+    "index.html": "/reactjs-treehouse/index.html",
+    "precache-manifest.ad3352b3d6bb625b7ca4552de7e6692c.js": "/reactjs-treehouse/precache-manifest.ad3352b3d6bb625b7ca4552de7e6692c.js",
+    "service-worker.js": "/reactjs-treehouse/service-worker.js",
+    "static/css/main.ccaa83d5.chunk.css.map": "/reactjs-treehouse/static/css/main.ccaa83d5.chunk.css.map",
+    "static/js/2.b5933473.chunk.js.LICENSE.txt": "/reactjs-treehouse/static/js/2.b5933473.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e2609522.js",
+    "static/js/2.b5933473.chunk.js",
+    "static/css/main.ccaa83d5.chunk.css",
+    "static/js/main.c0a13209.chunk.js"
+  ]
+}

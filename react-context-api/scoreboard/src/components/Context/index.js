@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-const ScorboardContext = React.createContext();
+const ScoreboardContext = React.createContext();
 
-export const Provider = ScorboardContext.Provider;
-export const Consumer = ScorboardContext.Consumer;
+export const Provider = ScoreboardContext.Provider;
+export const Consumer = ScoreboardContext.Consumer;
+

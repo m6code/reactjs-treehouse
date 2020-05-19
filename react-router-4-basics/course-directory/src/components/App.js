@@ -1,5 +1,9 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import {
+  BrowserRouter,
+  Route,
+  Switch
+} from 'react-router-dom';
 
 // App components
 import Header from './Header';
@@ -13,15 +17,20 @@ const App = () => (
   <BrowserRouter>
     <div className="container">
       <Header />
+      
       <Switch>
-      <Route exact path="/" component={Home} />
-      <Route path="/about" render={() => <About />} />
-      <Route path='/teachers' component={Teachers} />
-      <Route path='/courses' component={Courses} />
-      <Route component={NotFound}/>
+        <Route exact path="/" component={Home} />
+        <Route path="/about" render={ () => <About title='About' /> } />
+        <Route path="/teachers" component={Teachers} />
+        <Route path="/courses" component={Courses} />
+        <Route component={NotFound} />
       </Switch>
     </div>
   </BrowserRouter>
 );
 
 export default App;
+
+
+
+

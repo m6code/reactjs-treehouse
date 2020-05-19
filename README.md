@@ -65,6 +65,11 @@
 - Render Prop is a technique for sharing code between React Components using a prop whose value is a function.
 
 ## 5. [React Router 4 Basics](https://teamtreehouse.com/library/react-router-4-basics-2)
+- To get started using react router run `npm install --save react-router-dom`
+- React Router comes with two major components
+	- BrowserRouter : this the root routing component that keeps your UI in sync with URL
+	- Route : is responsible for rendering a component in your app when the URL matches it's path.
+
 ## 6. [Whats New in React 16](https://teamtreehouse.com/library/whats-new-in-react-16)
 ## 7. [Data Fetching in React](https://teamtreehouse.com/library/data-fetching-in-react)
 ## 8. [Deploying a React App](https://teamtreehouse.com/library/deploying-a-react-app)

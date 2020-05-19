@@ -53,7 +53,15 @@
 		- [Learn more about PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html)
 
 ## 3. [Using Create React App](https://teamtreehouse.com/library/using-create-react-app)
+
 ## 4. [React Context API](https://teamtreehouse.com/library/react-context-api)
+- Context API provides a way to pass data down to components without having to pass props manually at every single level. Context helps us avoid prop drilling
+- Context is mainly used when some part of the data needs to be accessed at different nesting level by many components
+- It has 3 essential parts
+ - React.createContext() : sets up a context and returns an object with a Provider and a Consumer.
+ - Provider : is used as high a possible in the component tree. it allows a Consumer to subscribe to context changes.
+ - Consumer : access the Provider to get any data they need.
+
 ## 5. [React Router 4 Basics](https://teamtreehouse.com/library/react-router-4-basics-2)
 ## 6. [Whats New in React 16](https://teamtreehouse.com/library/whats-new-in-react-16)
 ## 7. [Data Fetching in React](https://teamtreehouse.com/library/data-fetching-in-react)

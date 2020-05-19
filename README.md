@@ -58,9 +58,9 @@
 - Context API provides a way to pass data down to components without having to pass props manually at every single level. Context helps us avoid prop drilling
 - Context is mainly used when some part of the data needs to be accessed at different nesting level by many components
 - It has 3 essential parts
- - React.createContext() : sets up a context and returns an object with a Provider and a Consumer.
- - Provider : is used as high a possible in the component tree. it allows a Consumer to subscribe to context changes.
- - Consumer : access the Provider to get any data they need.
+	- React.createContext() : sets up a context and returns an object with a Provider and a Consumer.
+	- Provider : is used as high a possible in the component tree. it allows a Consumer to subscribe to context changes.
+	- Consumer : access the Provider to get any data they need.
 - To render anything inside a Consumer we use a pattern called Render Prop
 - Render Prop is a technique for sharing code between React Components using a prop whose value is a function.
 

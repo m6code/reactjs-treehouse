@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import Header from './Header';
 import Player from './Player'
 import AddPlayerForm from './AddPlayerForm';
+import { Provider } from './Context';
 
 // App component
 class App extends Component {
@@ -64,36 +65,39 @@ class App extends Component {
         });
     }
 
-    getHighScore = () =>{
+    getHighScore = () => {
         const scores = this.state.players.map(p => p.score);
         const highestScore = Math.max(...scores)
-        if(highestScore){
+        if (highestScore) {
             return highestScore;
         }
         return null;
     }
 
     render() {
-        return (
-            <div className="scoreboard">
-                <Header players={this.state.players} />
 
-                {/* Players list */}
-                {this.state.players.sort((a,b) => (a.score < b.score ? 1 : -1)).map((player, index) =>
-                    <Player
-                        name={player.name}
-                        score={player.score}
-                        key={player.id.toString()}
-                        id={player.id}
-                        index={index}
-                        removePlayer={this.handleRemovePlayer}
-                        changeScore={this.handleScoreChange}
-                        isHighScore={this.getHighScore() === player.score}
-                    // react docs recommends that our key be string
-                    />
-                )}
-                <AddPlayerForm addPlayer={this.handleAddPlayer} />
-            </div>
+        return (
+            <Provider>
+                <div className="scoreboard">
+                    <Header players={this.state.players} />
+
+                    {/* Players list */}
+                    {this.state.players.sort((a, b) => (a.score < b.score ? 1 : -1)).map((player, index) =>
+                        <Player
+                            name={player.name}
+                            score={player.score}
+                            key={player.id.toString()}
+                            id={player.id}
+                            index={index}
+                            removePlayer={this.handleRemovePlayer}
+                            changeScore={this.handleScoreChange}
+                            isHighScore={this.getHighScore() === player.score}
+                        // react docs recommends that our key be string
+                        />
+                    )}
+                    <AddPlayerForm addPlayer={this.handleAddPlayer} />
+                </div>
+            </Provider>
         );
     }
 

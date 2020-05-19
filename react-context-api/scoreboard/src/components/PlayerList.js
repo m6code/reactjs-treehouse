@@ -5,11 +5,10 @@ import Player from './Player';
 const PlayerList = () => {
   return (
     <Consumer>
-      { context => (
+      { ({ players }) => (
         <React.Fragment>
-          {context.players.map( (player, index) =>
+          {players.map( (player, index) =>
             <Player 
-              {...player}
               key={player.id.toString()} 
               index={index}         
             />

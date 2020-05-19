@@ -29,37 +29,37 @@ export class Provider extends Component {
     ]
   };
 
-  // player id counter
-  prevPlayerId = 4;
+ // player id counter
+ prevPlayerId = 4;
 
-  handleScoreChange = (index, delta) => {
-    this.setState( prevState => ({
-      score: prevState.players[index].score += delta
-    }));
-  }
+ handleScoreChange = (index, delta) => {
+   this.setState( prevState => ({
+     score: prevState.players[index].score += delta
+   }));
+ }
 
-  handleAddPlayer = (name) => {
-    this.setState( prevState => {
-      return {
-        players: [
-          ...prevState.players,
-          {
-            name,
-            score: 0,
-            id: this.prevPlayerId += 1
-          }
-        ]
-      };
-    });
-  }
+ handleAddPlayer = (name) => {
+   this.setState( prevState => {
+     return {
+       players: [
+         ...prevState.players,
+         {
+           name,
+           score: 0,
+           id: this.prevPlayerId += 1
+         }
+       ]
+     };
+   });
+ }
 
-  handleRemovePlayer = (id) => {
-    this.setState( prevState => {
-      return {
-        players: prevState.players.filter(p => p.id !== id)
-      };
-    });
-  }
+ handleRemovePlayer = (id) => {
+   this.setState( prevState => {
+     return {
+       players: prevState.players.filter(p => p.id !== id)
+     };
+   });
+ }
 
   render() {
     return (

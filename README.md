@@ -61,6 +61,8 @@
  - React.createContext() : sets up a context and returns an object with a Provider and a Consumer.
  - Provider : is used as high a possible in the component tree. it allows a Consumer to subscribe to context changes.
  - Consumer : access the Provider to get any data they need.
+- To render anything inside a Consumer we use a pattern called Render Prop
+- Render Prop is a technique for sharing code between React Components using a prop whose value is a function.
 
 ## 5. [React Router 4 Basics](https://teamtreehouse.com/library/react-router-4-basics-2)
 ## 6. [Whats New in React 16](https://teamtreehouse.com/library/whats-new-in-react-16)

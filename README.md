@@ -83,6 +83,9 @@
 	- configure homepage attribute, add deploy script and install gh-pages
 	- if you are using BrowserRouter and the base directory attribute like this `<BrowserRouter basename="/course-directory">`
 	- then run npm deploy to automatically publish app on gh-pages
+	- use `<HashRouter>` instead of `<BrowserRouter>` to fix 404 error on page reload
+	- more here [hosting spa on gh-pages](https://github.com/rafrex/spa-github-pages#single-page-apps-for-github-pages)
+	
 ## 9. [React by Example](https://teamtreehouse.com/library/react-by-example)
 ## 10. [React Authentication](https://teamtreehouse.com/library/react-authentication)
 ## 11. [Building Application with React and Redux](https://teamtreehouse.com/library/building-applications-with-react-and-redux)

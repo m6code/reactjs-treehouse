@@ -71,6 +71,8 @@
 	- Route : is responsible for rendering a component in your app when the URL matches it's path.
 
 ## 6. [Whats New in React 16](https://teamtreehouse.com/library/whats-new-in-react-16)
+- componentDidCatch() is used to catch errors instead of breaking the UI when a component has an error
+
 ## 7. [Data Fetching in React](https://teamtreehouse.com/library/data-fetching-in-react)
 ## 8. [Deploying a React App](https://teamtreehouse.com/library/deploying-a-react-app)
 ## 9. [React by Example](https://teamtreehouse.com/library/react-by-example)

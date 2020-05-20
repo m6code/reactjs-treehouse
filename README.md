@@ -74,7 +74,13 @@
 - componentDidCatch() is used to catch errors instead of breaking the UI when a component has an error
 
 ## 7. [Data Fetching in React](https://teamtreehouse.com/library/data-fetching-in-react)
+
 ## 8. [Deploying a React App](https://teamtreehouse.com/library/deploying-a-react-app)
+- Hosting locally / manually
+	- use `npm run build` to create a production ready build of your app. this will generate a build folder for your app
+	- to run on your PC install serve `npm install -g serve`, then run `serve -s build`
+- Hosting on [github pages](pages.github.com) 
+	-
 ## 9. [React by Example](https://teamtreehouse.com/library/react-by-example)
 ## 10. [React Authentication](https://teamtreehouse.com/library/react-authentication)
 ## 11. [Building Application with React and Redux](https://teamtreehouse.com/library/building-applications-with-react-and-redux)

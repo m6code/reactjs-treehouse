@@ -1,31 +1,42 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-import StudentForm from './components/StudentForm';
-import Modal from './components/Modal';
+import Teacher from './Teacher';
 
 class App extends Component {
 
-  handleClick = () => {
-    console.log('I was clicked!');
+  state = {
+    teacher: ''
+  };
+
+  updateTeacher = teacher => {
+    const newTeacher = teacher;
+    this.setState(prevState => { 
+      if (prevState.teacher === newTeacher){
+        return null;
+      }else{
+        return {teacher}
+      }
+    });
   }
 
   render() {
-    return (
-      <div className="App" onClick={this.handleClick}>
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <StudentForm />
+    const teachers = ['jay', 'vivianne', 'ecma', 'json'];
 
-        <Modal>
-          <div className="modal">
-            This is the Modal Window
-            <button>Close x</button>
-          </div>
-        </Modal>
+    return (
+      <div className="App">
+        <header>
+          <h1>Meet the Teachers</h1>
+          {teachers.map((teacher,i) =>
+            <button
+              key={teacher}
+              type="button"
+              value={teacher}
+              onClick={e => this.updateTeacher(e.target.value)}
+            >{teacher}
+            </button>)}
+        </header>
+
+        <Teacher teacher={this.state.teacher} />
       </div>
     );
   }

@@ -1,17 +1,33 @@
 import React, { Component } from 'react';
+import logo from './logo.svg';
 import './App.css';
 
-import Header from './Header';
-import Teachers from './Teachers';
-import Footer from './Footer';
+import StudentForm from './components/StudentForm';
+import Modal from './components/Modal';
 
 class App extends Component {
+
+  handleClick = () => {
+    console.log('I was clicked!');
+  }
+
   render() {
-    return [
-      <Header key="head" />,
-      <Teachers key="teach" />,
-      <Footer key="foot" />
-    ];
+    return (
+      <div className="App" onClick={this.handleClick}>
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="App-title">Welcome to React</h1>
+        </header>
+        <StudentForm />
+
+        <Modal>
+          <div className="modal">
+            This is the Modal Window
+            <button>Close x</button>
+          </div>
+        </Modal>
+      </div>
+    );
   }
 }
 

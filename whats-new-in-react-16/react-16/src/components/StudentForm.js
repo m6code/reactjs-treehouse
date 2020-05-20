@@ -28,8 +28,13 @@ export default class User extends Component {
         />
 
         <button
+          className="btn-reset"
           type="button"
-          onClick={() => this.setState({ student: null })}
+          onClick={() => this.setState({
+            student: {
+              name: ''
+            }
+          })}
         >Reset Student</button>
 
         <p><strong>Student Name:</strong> {name}</p>

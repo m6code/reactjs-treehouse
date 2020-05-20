@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import './App.css';
 import SearchForm from './Components/SearchForm';
 import GifList from './Components/GifList';
@@ -14,14 +15,13 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    fetch('http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC')
-      .then(res => res.json())
-      .then(resData => {
-        this.setState({gifs: resData.data});
+    axios.get('http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC')
+      .then((response) => {
+        this.setState({gifs: response.data.data});
       })
-      .catch(err => {
-        console.log('Error fetching and parsing data', err)
-      });
+      .catch((error) => {
+        console.log('Error fetching and parsing data ', error)
+      })
   }
 
 

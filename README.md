@@ -80,7 +80,9 @@
 	- use `npm run build` to create a production ready build of your app. this will generate a build folder for your app
 	- to run on your PC install serve `npm install -g serve`, then run `serve -s build`
 - Hosting on [github pages](pages.github.com) 
-	-
+	- configure homepage attribute, add deploy script and install gh-pages
+	- if you are using BrowserRouter and the base directory attribute like this `<BrowserRouter basename="/course-directory">`
+	- then run npm deploy to automatically publish app on gh-pages
 ## 9. [React by Example](https://teamtreehouse.com/library/react-by-example)
 ## 10. [React Authentication](https://teamtreehouse.com/library/react-authentication)
 ## 11. [Building Application with React and Redux](https://teamtreehouse.com/library/building-applications-with-react-and-redux)

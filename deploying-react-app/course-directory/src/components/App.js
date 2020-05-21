@@ -2,8 +2,7 @@ import React from 'react';
 import {
   BrowserRouter,
   Route,
-  Switch,
-  HashRouter
+  Switch
 } from 'react-router-dom';
 
 // App components
@@ -16,7 +15,7 @@ import NotFound from './NotFound';
 import Featured from './Featured';
 
 const App = () => (
-  <HashRouter>
+  <BrowserRouter>
     <div className="container">
       <Header />
       
@@ -29,7 +28,7 @@ const App = () => (
         <Route component={NotFound} />
       </Switch>
     </div>
-  </HashRouter>
+  </BrowserRouter>
 );
 
 export default App;

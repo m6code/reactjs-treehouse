@@ -85,6 +85,10 @@
 	- then run npm deploy to automatically publish app on gh-pages
 	- use `<HashRouter>` instead of `<BrowserRouter>` to fix 404 error on page reload
 	- more here [hosting spa on gh-pages](https://github.com/rafrex/spa-github-pages#single-page-apps-for-github-pages)
+- Deploying to now (vercel.com) [more here](https://github.com/zeit/now/tree/master/examples) and [here](https://github.com/zeit/now/tree/master/examples/create-react-app)
+	1. open an account with [Vercel formerly Zeit](https://vercel.com)
+	2. `npm i -g vercel`
+	3. then type `vercel` in terminal /cmd to deploy
 	
 ## 9. [React by Example](https://teamtreehouse.com/library/react-by-example)
 ## 10. [React Authentication](https://teamtreehouse.com/library/react-authentication)

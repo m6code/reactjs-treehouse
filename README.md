@@ -89,6 +89,18 @@
 	1. open an account with [Vercel formerly Zeit](https://vercel.com)
 	2. `npm i -g vercel`
 	3. then type `vercel` in terminal /cmd to deploy
+- Deploying to Netlify
+	1. Sign up for Netlify at [Netlify.com](https://www.netlify.com)
+	2. Drag and drop your build folder and it will be deployed. You can also use command line by
+		1. installing netlify `npm i -g netlify-cli`
+		2. run `netlify init`
+		3. run `netlify deploy` specify build as deploy path
+		4. create and configure new site
+		5. run `netlify deploy --prod` specify build as deploy path
+	3. if you are using router then configure
+		1. create a file in your build folder named _redirects
+		2. add the following rule to the file
+			`/* /index.html 200`
 	
 ## 9. [React by Example](https://teamtreehouse.com/library/react-by-example)
 ## 10. [React Authentication](https://teamtreehouse.com/library/react-authentication)

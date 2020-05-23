@@ -43,6 +43,14 @@ class App extends React.Component {
   toggleConfirmationAt = index =>
     this.toggleGuestPropertyAt("isConfirmed", index)
 
+  removeGuestAt = index =>
+    this.setState({
+      guests: [
+        ...this.state.guests.slice(0, index),
+        ...this.state.guests.slice(index + 1)
+      ]
+    })
+
   toggleEditingAt = index =>
     this.toggleGuestPropertyAt("isEditing", index)
 
@@ -61,9 +69,9 @@ class App extends React.Component {
   }
 
   toggleFilter = () =>
-    this.setState({isFiltered: !this.state.isFiltered})
+    this.setState({ isFiltered: !this.state.isFiltered })
 
-  handleNameInput = e => this.setState({pendingGuest: e.target.value});
+  handleNameInput = e => this.setState({ pendingGuest: e.target.value });
 
   newGuestSubmitHandler = e => {
     e.preventDefault();
@@ -91,10 +99,10 @@ class App extends React.Component {
           <h1>RSVP</h1>
           <p>A Treehouse App</p>
           <form onSubmit={this.newGuestSubmitHandler}>
-            <input 
-              type="text" 
+            <input
+              type="text"
               onChange={this.handleNameInput}
-              value={this.state.pendingGuest} 
+              value={this.state.pendingGuest}
               placeholder="Invite Someone" />
             <button type="submit" name="submit" value="submit">Submit</button>
           </form>
@@ -103,11 +111,11 @@ class App extends React.Component {
           <div>
             <h2>Invitees</h2>
             <label>
-              <input 
-                type="checkbox" 
-                  onChange={this.toggleFilter}
-                  checked={this.state.isFiltered}
-                /> Hide those who haven't responded
+              <input
+                type="checkbox"
+                onChange={this.toggleFilter}
+                checked={this.state.isFiltered}
+              /> Hide those who haven't responded
           </label>
           </div>
           <table className="counter">
@@ -132,6 +140,7 @@ class App extends React.Component {
             toggleEditingAt={this.toggleEditingAt}
             setNameAt={this.setNameAt}
             isFiltered={this.state.isFiltered}
+            removeGuestAt={this.removeGuestAt}
           />
         </div>
       </div>

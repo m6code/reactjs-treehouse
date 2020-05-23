@@ -19,6 +19,7 @@
    	- decrementScore = () => {...} and just reference it in the button's onClick like so `{this.decrementScore}`
     - incrementScore = () => {...} and just reference it in the button's onClick like so `{this.incrementScore}`
 
+#### Final project URL [Scoreboard V1](https://scoreboard-react-basics.netlify.app)
 
 ## 2. [React Components](https://teamtreehouse.com/library/react-components)
 - Components is a function or class that optionally accepts input and renders a part of your UI.
@@ -52,6 +53,8 @@
 		- PropTypes.array|bool|func|number|object|string|symbol. 
 		- [Learn more about PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html)
 
+#### Final project URL []()
+
 ## 3. [Using Create React App](https://teamtreehouse.com/library/using-create-react-app)
 
 ## 4. [React Context API](https://teamtreehouse.com/library/react-context-api)
@@ -69,6 +72,8 @@
 - React Router comes with two major components
 	- BrowserRouter : this the root routing component that keeps your UI in sync with URL
 	- Route : is responsible for rendering a component in your app when the URL matches it's path.
+
+#### Final project URL []()
 
 ## 6. [Whats New in React 16](https://teamtreehouse.com/library/whats-new-in-react-16)
 - componentDidCatch() is used to catch errors instead of breaking the UI when a component has an error
@@ -101,7 +106,13 @@
 		1. create a file in your build folder named _redirects
 		2. add the following rule to the file
 			`/* /index.html 200`
+
+#### Final project URL []()
+
 	
 ## 9. [React by Example](https://teamtreehouse.com/library/react-by-example)
+
+#### Final project URL [RSVP Tracker](rsvp-track.netlify.app)
+
 ## 10. [React Authentication](https://teamtreehouse.com/library/react-authentication)
 ## 11. [Building Application with React and Redux](https://teamtreehouse.com/library/building-applications-with-react-and-redux)
